@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CC Generator | Ghost Inbox Labs</title>
+  <meta name="description" content="Generate test credit card numbers with expiry and CVV for payment form development and QA testing." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://ghostinbox.me/cc-gen/" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="logo">GHOST<span>INBOX</span> LABS</a>
+      <nav class="nav-links" data-nav></nav>
+    </div>
+  </header>
+
+  <main class="container page-shell">
+    <section class="page-head">
+      <h1>Credit Card Generator</h1>
+      <p>Generate realistic test cards with expiry/CVV for dev and QA environments.</p>
+    </section>
+
+    <section class="panel">
+      <div class="row">
+        <div class="field">
+          <label>Card Type</label>
+          <select data-cc-brand>
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="amex">Amex</option>
+            <option value="discover">Discover</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Count (1-20)</label>
+          <input data-cc-count type="number" min="1" max="20" value="5" />
+        </div>
+      </div>
+      <div class="actions">
+        <button data-generate-cc>Generate</button>
+      </div>
+      <div data-cc-output></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span data-year></span> Ghost Inbox Labs. Test data only.</div>
+  </footer>
+  <div class="toast" data-toast></div>
+  <script src="../app.js"></script>
+  <script>
+    GhostInbox.attachLayout('cc-gen.html');
+    GhostInbox.setupCcGen();
+  </script>
+</body>
+</html>

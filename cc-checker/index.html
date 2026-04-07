@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CC Checker | Ghost Inbox Labs</title>
+  <meta name="description" content="Bulk check card number validity using Luhn algorithm for QA testing and parser verification." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://ghostinbox.me/cc-checker/" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="logo">GHOST<span>INBOX</span> LABS</a>
+      <nav class="nav-links" data-nav></nav>
+    </div>
+  </header>
+
+  <main class="container page-shell">
+    <section class="page-head">
+      <h1>Bulk CC Checker</h1>
+      <p>Paste up to 100 lines and check card structure quickly using Luhn validation.</p>
+    </section>
+
+    <section class="panel">
+      <div class="field">
+        <label>Cards (one per line)</label>
+        <textarea data-checker-input placeholder="4111111111111111|12|2028|123"></textarea>
+      </div>
+      <div class="actions">
+        <button data-checker-run>Run Check</button>
+      </div>
+      <div data-checker-output></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span data-year></span> Ghost Inbox Labs. Test data only.</div>
+  </footer>
+  <div class="toast" data-toast></div>
+  <script src="../app.js"></script>
+  <script>
+    GhostInbox.attachLayout('cc-checker.html');
+    GhostInbox.setupCcChecker();
+  </script>
+</body>
+</html>

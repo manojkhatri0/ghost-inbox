@@ -1,107 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon | Ghost Inbox</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            overflow: hidden;
-        }
-
-        .container {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 3rem;
-            border-radius: 20px;
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            animation: fadeIn 1.5s ease-out;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
-            background: linear-gradient(to right, #fff, #8e9eab);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        p {
-            font-size: 1.2rem;
-            color: #ccc;
-            margin-bottom: 2rem;
-        }
-
-        .loader {
-            width: 50px;
-            height: 50px;
-            border: 5px solid #f3f3f3;
-            border-top: 5px solid #3498db;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 2rem;
-        }
-
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 0.9rem;
-            opacity: 0.7;
-            transition: 0.3s;
-        }
-
-        .social-links a:hover {
-            opacity: 1;
-            color: #3498db;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 2.2rem; }
-            .container { width: 90%; padding: 2rem; }
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ghost Inbox Labs</title>
+        <meta name="description" content="Ghost Inbox Labs provides free developer testing tools: temp mail, CC generator, BIN lookup, address generator, CC checker, TOTP generator, and test chat." />
+        <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+        <link rel="canonical" href="https://ghostinbox.me/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Ghost Inbox Labs - Developer Testing Toolkit" />
+        <meta property="og:description" content="Disposable email inboxes, card testing tools, BIN lookup, address generator, and TOTP utilities in one place." />
+        <meta property="og:url" content="https://ghostinbox.me/" />
+        <meta property="og:site_name" content="Ghost Inbox Labs" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ghost Inbox Labs - Developer Testing Toolkit" />
+        <meta name="twitter:description" content="Free testing toolkit for temp mail, cards, BIN, addresses, and OTP workflows." />
+    <link rel="stylesheet" href="styles.css" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Ghost Inbox Labs",
+                "url": "https://ghostinbox.me/",
+                "description": "Developer testing tools for temporary email, cards, BIN lookup, addresses, and OTP simulation.",
+                "inLanguage": "en",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Ghost Inbox Labs"
+                }
+            }
+        </script>
 </head>
 <body>
-
-    <div class="container">
-        <div class="loader"></div>
-        <h1>GHOST INBOX</h1>
-        <p>Something extraordinary is under construction.</p>
-        
-        <div class="social-links">
-            <span>Follow us for updates</span><br><br>
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a href="index.html" class="logo">GHOST<span>INBOX</span> LABS</a>
+            <nav class="nav-links" data-nav></nav>
         </div>
-    </div>
+    </header>
 
+    <main class="container">
+        <section class="hero">
+            <h1>Developer Test Toolkit in One Place</h1>
+            <p>
+                Build, QA and demo faster with disposable inboxes, card test data, BIN insights,
+                fake addresses, TOTP flows, and real-time test chat.
+            </p>
+            <div class="actions">
+                <a class="btn" href="/temp-mail/">Open Temp Mail</a>
+                <a class="button-link ghost" href="/cc-gen/">Generate Cards</a>
+            </div>
+        </section>
+
+        <section class="grid tool-grid">
+            <article class="card">
+                <h3>Temp Mail</h3>
+                <p>Generate disposable addresses and inspect test emails instantly.</p>
+                <a class="button-link" href="/temp-mail/">Launch</a>
+            </article>
+            <article class="card">
+                <h3>CC Generator</h3>
+                <p>Generate Luhn-valid test cards with expiry and CVV.</p>
+                <a class="button-link" href="/cc-gen/">Launch</a>
+            </article>
+            <article class="card">
+                <h3>BIN Lookup</h3>
+                <p>Quick BIN intelligence for issuer and scheme testing workflows.</p>
+                <a class="button-link" href="/bin-lookup/">Launch</a>
+            </article>
+            <article class="card">
+                <h3>Address Generator</h3>
+                <p>Create realistic fake addresses for forms and map integrations.</p>
+                <a class="button-link" href="/address-gen/">Launch</a>
+            </article>
+            <article class="card">
+                <h3>CC Checker</h3>
+                <p>Bulk validate card lines with fast local checks (up to 100 lines).</p>
+                <a class="button-link" href="/cc-checker/">Launch</a>
+            </article>
+            <article class="card">
+                <h3>TOTP Generator</h3>
+                <p>Time-based one-time code simulator for auth flow testing.</p>
+                <a class="button-link" href="/totp-gen/">Launch</a>
+            </article>
+            <article class="card">
+                <h3>Anonymous Chat</h3>
+                <p>Lightweight room simulation for message UI and moderation tests.</p>
+                <a class="button-link" href="/chat/">Launch</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">© <span data-year></span> Ghost Inbox Labs. Test data only.</div>
+    </footer>
+    <div class="toast" data-toast></div>
+    <script src="app.js"></script>
+    <script>GhostInbox.attachLayout('index.html');</script>
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOTP Generator | Ghost Inbox Labs</title>
+  <meta name="description" content="Generate rotating one-time passwords from Base32 secrets for 2FA and authentication flow testing." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://ghostinbox.me/totp-gen/" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="logo">GHOST<span>INBOX</span> LABS</a>
+      <nav class="nav-links" data-nav></nav>
+    </div>
+  </header>
+
+  <main class="container page-shell">
+    <section class="page-head">
+      <h1>TOTP Generator</h1>
+      <p>Simulate rotating OTP codes for two-factor authentication test flows.</p>
+    </section>
+
+    <section class="panel">
+      <div class="field">
+        <label>Base32 Secret</label>
+        <input data-totp-secret type="text" value="JBSWY3DPEHPK3PXP" />
+      </div>
+      <div class="actions">
+        <button data-totp-random>Random Secret</button>
+      </div>
+      <div class="result-box">
+        <strong>Code:</strong> <span data-totp-code>------</span><br />
+        <small>Refresh in <span data-totp-left>--</span></small>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span data-year></span> Ghost Inbox Labs. Test data only.</div>
+  </footer>
+  <div class="toast" data-toast></div>
+  <script src="../app.js"></script>
+  <script>
+    GhostInbox.attachLayout('totp-gen.html');
+    GhostInbox.setupTotp();
+  </script>
+</body>
+</html>

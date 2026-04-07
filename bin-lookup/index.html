@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIN Lookup | Ghost Inbox Labs</title>
+  <meta name="description" content="Lookup BIN metadata like bank, scheme, card type and country for payment testing and validation." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://ghostinbox.me/bin-lookup/" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="logo">GHOST<span>INBOX</span> LABS</a>
+      <nav class="nav-links" data-nav></nav>
+    </div>
+  </header>
+
+  <main class="container page-shell">
+    <section class="page-head">
+      <h1>BIN Lookup</h1>
+      <p>Validate issuer metadata with live BIN API lookup.</p>
+    </section>
+
+    <section class="panel">
+      <div class="row">
+        <div class="field">
+          <label>BIN Number (6-8 digits)</label>
+          <input data-bin-input type="text" maxlength="8" placeholder="411111" />
+        </div>
+        <div class="field">
+          <label>Action</label>
+          <div class="actions"><button data-bin-search>Lookup</button></div>
+        </div>
+      </div>
+      <div class="list" data-bin-output></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span data-year></span> Ghost Inbox Labs. Test data only.</div>
+  </footer>
+  <div class="toast" data-toast></div>
+  <script src="../app.js"></script>
+  <script>
+    GhostInbox.attachLayout('bin-lookup.html');
+    GhostInbox.setupBinLookup();
+  </script>
+</body>
+</html>

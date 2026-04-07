@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Address Generator | Ghost Inbox Labs</title>
+  <meta name="description" content="Generate realistic fake addresses by region for testing forms, onboarding, and checkout flows." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://ghostinbox.me/address-gen/" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="logo">GHOST<span>INBOX</span> LABS</a>
+      <nav class="nav-links" data-nav></nav>
+    </div>
+  </header>
+
+  <main class="container page-shell">
+    <section class="page-head">
+      <h1>Address Generator</h1>
+      <p>Create realistic regional addresses for onboarding and checkout tests.</p>
+    </section>
+
+    <section class="panel">
+      <div class="row">
+        <div class="field">
+          <label>Region</label>
+          <select data-address-region>
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="in">India</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Action</label>
+          <div class="actions"><button data-address-generate>Generate Address</button></div>
+        </div>
+      </div>
+      <div class="list" data-address-output></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span data-year></span> Ghost Inbox Labs. Test data only.</div>
+  </footer>
+  <div class="toast" data-toast></div>
+  <script src="../app.js"></script>
+  <script>
+    GhostInbox.attachLayout('address-gen.html');
+    GhostInbox.setupAddressGen();
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat Room | Ghost Inbox Labs</title>
+  <meta name="description" content="Anonymous chat room simulation interface for frontend QA testing and realtime UI prototyping." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://ghostinbox.me/chat/" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="logo">GHOST<span>INBOX</span> LABS</a>
+      <nav class="nav-links" data-nav></nav>
+    </div>
+  </header>
+
+  <main class="container page-shell">
+    <section class="page-head">
+      <h1>Anonymous Chat Room</h1>
+      <p>Prototype realtime room UI with fake traffic for frontend testing.</p>
+    </section>
+
+    <section class="panel">
+      <div class="row">
+        <div class="field">
+          <label>Your Nickname</label>
+          <input data-chat-nick type="text" value="GhostUser" />
+        </div>
+      </div>
+      <form class="actions" data-chat-form>
+        <input data-chat-input type="text" placeholder="Write a message..." />
+        <button type="submit">Send</button>
+      </form>
+      <div class="list" data-chat-list></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span data-year></span> Ghost Inbox Labs. Test data only.</div>
+  </footer>
+  <div class="toast" data-toast></div>
+  <script src="../app.js"></script>
+  <script>
+    GhostInbox.attachLayout('chat.html');
+    GhostInbox.setupChat();
+  </script>
+</body>
+</html>

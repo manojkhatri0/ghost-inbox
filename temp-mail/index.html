@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temp Mail | Ghost Inbox Labs</title>
+  <meta name="description" content="Create disposable email inboxes and fetch real incoming messages for signup and QA testing workflows." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://ghostinbox.me/temp-mail/" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="logo">GHOST<span>INBOX</span> LABS</a>
+      <nav class="nav-links" data-nav></nav>
+    </div>
+  </header>
+
+  <main class="container page-shell">
+    <section class="page-head">
+      <h1>Temp Mail</h1>
+      <p>Create real disposable inboxes using live API and fetch incoming emails for QA scenarios.</p>
+    </section>
+
+    <section class="panel">
+      <div class="row">
+        <div class="field">
+          <label>Generated Email</label>
+          <div class="result-box" data-email>-</div>
+        </div>
+        <div class="field">
+          <label>Actions</label>
+          <div class="actions">
+            <button data-regen-mail>New Address</button>
+            <button class="ghost" data-seed-mail>Refresh Inbox</button>
+            <button class="ghost" data-copy-mail>Copy</button>
+          </div>
+        </div>
+      </div>
+      <div class="list" data-inbox></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span data-year></span> Ghost Inbox Labs. Test data only.</div>
+  </footer>
+  <div class="toast" data-toast></div>
+  <script src="../app.js"></script>
+  <script>
+    GhostInbox.attachLayout('temp-mail.html');
+    GhostInbox.setupTempMail();
+  </script>
+</body>
+</html>
